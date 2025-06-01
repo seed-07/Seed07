@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Seed – Start, Build, Grow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f5132;
+      --secondary: #f4f4f4;
+      --text: #1a1a1a;
+      --bg: #ffffff;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 3rem 1.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    p, li {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+
+    .cta {
+      display: inline-block;
+      background-color: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      border-radius: 8px;
+      margin-top: 1.5rem;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .cta:hover {
+      background-color: #0a3e26;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: var(--secondary);
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    form {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #0a3e26;
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <header data-aos="fade-down">
+    <h1>Seed</h1>
+  </header>
+
+  <section data-aos="fade-up">
+    <h2>About Us</h2>
+    <p>
+      Seed is a premium community that helps new and growing online stores succeed. 
+      We provide expert guidance, practical tools, and affordable services tailored to your niche—whether it's shoes, clothing, gadgets, or more.
+    </p>
+  </section>
+
+  <section data-aos="zoom-in">
+    <h2>What We Offer</h2>
+    <ul>
+      <li>Free startup guidance</li>
+      <li>Affordable branding & setup</li>
+      <li>1-on-1 mentoring for store owners</li>
+      <li>Support for niche-specific stores</li>
+    </ul>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Get in Touch</h2>
+    <p>Start your online business journey with confidence. We're here to support you at every step.</p>
+    <a href="https://www.instagram.com/see_d07" class="cta" target="_blank">DM Us on Instagram</a>
+  </section>
+
+  <section data-aos="fade-up">
+    <h2>Send a Message</h2>
+    <p>You can contact us instantly on WhatsApp or send a message through email.</p>
+
+    <!-- WhatsApp Chat -->
+    <a href="https://wa.me/918301915133?text=Hi%20Seed%2C%20I%20need%20help%20starting%20my%20online%20store." class="cta" target="_blank">
+      Chat on WhatsApp
+    </a>
+
+    <p style="margin-top:2rem;">Or send us your question below:</p>
+
+    <!-- Email Form -->
+    <form action="https://formspree.io/f/your-id-here" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Question or Message" required></textarea>
+      <button type="submit">Send Email</button>
+    </form>
+  </section>
+
+  <footer data-aos="fade">
+    &copy; 2025 Seed. Premium support for online store owners.
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+
+  <!-- AOS & Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    window.onscroll = function () {
+      const btn = document.getElementById("scrollTopBtn");
+      btn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
